@@ -16,7 +16,11 @@ public class CountdownManager {
             while(crawler){
                 Crawler.getSiteCrawler().crawlSite();
 
-                sleepThread(thread);
+                try {
+                    thread.sleep(499);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -28,7 +32,11 @@ public class CountdownManager {
             while(scraper){
                 Crawler.getSiteCrawler().scrapeSite();
 
-                sleepThread(thread);
+                try {
+                    thread.sleep(99);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -40,7 +48,11 @@ public class CountdownManager {
             while(productSender){
                 Crawler.getSiteCrawler().sendProduct();
 
-                sleepThread(thread);
+                try {
+                    thread.sleep(499);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -69,11 +81,4 @@ public class CountdownManager {
         return productSender;
     }
 
-    private void sleepThread(Thread thread){
-        try {
-            thread.sleep(499);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }

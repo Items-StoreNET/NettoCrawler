@@ -10,7 +10,7 @@ public class ProductData {
 
     public boolean isValid(){
         return name != null && description != null && category != null && price != 0.0
-                && !name.isEmpty() && !description.isEmpty() && !category.isEmpty();
+                && grammage != 0 && !name.isEmpty() && !description.isEmpty() && !category.isEmpty();
     }
 
     public void setCategory(String category) {

@@ -20,7 +20,7 @@ public class NettoCrawler {
         countdownManager = new CountdownManager();
         countdownManager.startScraperCountdown();
         countdownManager.startCrawlerCountdown();
-        countdownManager.startSendingCountdown();
+        //countdownManager.startSendingCountdown();
     }
 
     public static ExecutorService getExecutorService() {
