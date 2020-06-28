@@ -29,12 +29,12 @@ public class ProductSender {
 
     private String createProductJson(ProductData productData) {
         return "{\"marketName\":\"Netto" +
-                "\";\"categoryName\":\"" + productData.getCategory() +
-                "\";\"productName\":\"" + productData.getName() +
-                "\";\"productInfo\":\"" + productData.getDescription() +
-                "\";\"currentPrice\":\"" + productData.getPrice() +
-                "\";\"rabbatPrice\":\"" + "" +
-                "\";\"productGrammage\":\"" + productData.getGrammage() + "\"}";
+                "\",\"categoryName\":\"" + productData.getCategory() +
+                "\",\"productName\":\"" + productData.getName() +
+                "\",\"productInfo\":\"" + productData.getDescription() +
+                "\",\"currentPrice\":\"" + productData.getPrice() +
+                "\",\"rabbatPrice\":\"" + "" +
+                "\",\"productGrammage\":\"" + productData.getGrammage() + "\"}";
     }
 
     private String replaceBadChars(String s) {
