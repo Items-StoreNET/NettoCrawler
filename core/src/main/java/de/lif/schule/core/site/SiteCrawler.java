@@ -49,9 +49,6 @@ public class SiteCrawler implements ISiteCrawlerAPI {
                 System.out.println("Crawling site " + fileName);
 
                 try (PrintWriter printWriter = new PrintWriter(filePath + randomName)) {
-                    //Connection connection = Jsoup.connect(fileName);
-                    //connection.cookies();
-
                     printWriter.println(Jsoup.connect(fileName).get().html());
 
                     scrapeList.add(randomName);
