@@ -11,13 +11,16 @@ public class ProductSender {
 
     public void send(ProductData productData) {
         try {
-            CloseableHttpClient httpClient = HttpClientBuilder.create().build();
             HttpPost httpRequest = new HttpPost("http://localhost:9000/collatio/product");
             httpRequest.addHeader("content-Type", "application/json; charset=UTF-8;");
+
             String productJson = createProductJson(productData);
             productJson = replaceBadChars(productJson);
+
             StringEntity entity = new StringEntity(productJson);
             httpRequest.setEntity(entity);
+
+            CloseableHttpClient httpClient = HttpClientBuilder.create().build();
             httpClient.execute(httpRequest);
         } catch (IOException ex){
             ex.printStackTrace();
