@@ -13,7 +13,7 @@ import java.util.*;
 
 public class SiteCrawler implements ISiteCrawlerAPI {
 
-    private String filePath = "C:\\Users\\Annett\\Desktop\\projekt\\sites\\";
+    private String filePath = "C:\\Users\\owner\\Desktop\\nettocrawler\\sites\\";
     private String archivPath = "C:\\Users\\Annett\\Desktop\\projekt\\archiv\\";
     private ProductSender productSender = new ProductSender();
 
